@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap:120px;
+   
+}
+
+.container a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:130px;
+    list-style: none;
+    
+}
+ul li a {
+    text-decoration: none;
+    color: black;
+
+}
