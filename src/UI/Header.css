@@ -4,8 +4,8 @@ header {
   font-family:  Roboto, Arial, "Noto Sans",
     "Liberation Sans", sans-serif;
   color: #111827;
-  background: #000000;
-  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+  background: rgba(0, 0, 0, 0.763);
+  border-bottom: 1px solid rgba(151, 151, 203, 0.964);
 }
 body{
   background-color: gray;
