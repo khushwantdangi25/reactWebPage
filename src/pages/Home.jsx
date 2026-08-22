@@ -3,21 +3,21 @@ import "./Home.css";
 
 export const Home = () => {
   return (
-    <main className="hero">
-      <div className="hero__scrim" aria-hidden="true" />
-
-      <div className="hero__content">
-        <p className="hero__brand">World</p>
-        <h1 className="hero__quote">
-          Don’t just dream about the world—go out and discover it, one adventure
-          at a time.
-        </h1>
-        <p className="hero__support">
-          Leave the map open. The next place is waiting.
-        </p>
-        <NavLink className="hero__cta" to="/country">
-          Start Exploring
-        </NavLink>
+    <main>
+      <div className="hero">
+        <div className="quote">
+          <h1>
+          “The world is a book, <br />and those who do not <br /> travel
+          read only one page.”
+          </h1>
+          <p>They can inspire planning a new trip, embracing spontaneity,<br />
+           or simply appreciating the experiences gained from past journeys.</p>
+           <button>Explore</button>
+        </div>
+        <div className="image">
+          <img src="https://th.bing.com/th/id/OIP.bahcsh5zMhWFZtqvoVHnrwHaEK?r=0&pid=CanonicalCanvas" 
+          alt="" />
+        </div>
       </div>
     </main>
   );

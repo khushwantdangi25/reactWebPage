@@ -54,7 +54,7 @@ body{
   text-decoration: none;
   color:beige;
   font-weight: 600;
-  background: rgba(5, 162, 171, 0.638); /* warm "wheat-like" tint */
+  background: rgba(0, 0, 0, 0.638); /* warm "wheat-like" tint */
   transition: background-color 180ms ease, transform 180ms ease,
     box-shadow 180ms ease, color 180ms ease;
 }
