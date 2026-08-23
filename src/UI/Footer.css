@@ -1,9 +1,10 @@
 .footer {
   width: 100%;
-  background: #1a1a1a;
-  color: #d1d5db;
+  background: #0d0d0d;
+  color: #9ca3af;
   font-family: Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
   margin-top: auto;
+  border-top: 1px solid #2a2a2a;
 }
 
 .footer-container {
@@ -19,14 +20,14 @@
   margin: 0 0 12px;
   font-size: 1.75rem;
   font-weight: 800;
-  color: #f5f5dc;
+  color: #f3f4f6;
 }
 
 .footer-brand p {
   margin: 0;
   line-height: 1.6;
   max-width: 320px;
-  color: #9ca3af;
+  color: #6b7280;
 }
 
 .footer-links h3,
@@ -34,7 +35,7 @@
   margin: 0 0 16px;
   font-size: 1rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #d1d5db;
 }
 
 .footer-links ul,
@@ -49,22 +50,22 @@
 
 .footer-links a {
   text-decoration: none;
-  color: #9ca3af;
+  color: #6b7280;
   transition: color 160ms ease;
 }
 
 .footer-links a:hover,
 .footer-links a[aria-current="page"] {
-  color: #ffffff;
+  color: #f3f4f6;
 }
 
 .footer-contact li {
-  color: #9ca3af;
+  color: #6b7280;
   line-height: 1.5;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #2a2a2a;
   padding: 18px 24px;
   text-align: center;
 }
@@ -72,7 +73,7 @@
 .footer-bottom p {
   margin: 0;
   font-size: 0.9rem;
-  color: #6b7280;
+  color: #4b5563;
 }
 
 @media (max-width: 768px) {
