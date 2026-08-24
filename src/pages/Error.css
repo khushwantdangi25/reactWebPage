@@ -4,16 +4,12 @@
   justify-content: center;
   min-height: 100vh;
   padding: 48px 24px;
-  background:
-    radial-gradient(ellipse at 30% 20%, rgba(55, 65, 81, 0.35), transparent 55%),
-    radial-gradient(ellipse at 70% 80%, rgba(31, 41, 55, 0.4), transparent 50%),
-    #1a1a1a;
+  background: #1a1a1a;
 }
 
 .error-content {
   max-width: 520px;
   text-align: center;
-  animation: error-fade-in 0.5s ease-out;
 }
 
 .error-code {
@@ -61,30 +57,16 @@
   border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 180ms ease, border-color 180ms ease,
-    transform 180ms ease;
 }
 
 .error-home-btn:hover {
   background: #4b5563;
   border-color: #6b7280;
-  transform: translateY(-1px);
 }
 
 .error-home-btn:focus-visible {
   outline: 2px solid #6b7280;
   outline-offset: 2px;
-}
-
-@keyframes error-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 640px) {
