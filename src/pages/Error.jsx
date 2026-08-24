@@ -1,14 +1,27 @@
-import { useRouteError } from "react-router-dom"
-import { NavLink } from "react-router-dom";
+import { NavLink, useRouteError } from "react-router-dom";
+import "./Error.css";
 
-export const Error = () =>{
-    const error = useRouteError();
+export const Error = () => {
+  const error = useRouteError();
 
-    return <div>
-        <h1>Oops! An error Occurred</h1>
-        <h2>{error.data}</h2>
-        <NavLink to = "/">
-        <button>Go Home</button>
+  const status = error?.status || 404;
+  const statusText = error?.statusText || "Page Not Found";
+  const message =
+    error?.data ||
+    error?.message ||
+    "The page you are looking for does not exist or something went wrong.";
+
+  return (
+    <main className="error-page">
+      <div className="error-content">
+        <p className="error-code">{status}</p>
+        <h1>Oops! Something went wrong</h1>
+        <h2>{statusText}</h2>
+        <p className="error-message">{message}</p>
+        <NavLink to="/" className="error-home-btn">
+          Go Home
         </NavLink>
-    </div>
-}
+      </div>
+    </main>
+  );
+};
