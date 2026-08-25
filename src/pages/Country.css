@@ -1,0 +1,112 @@
+.country-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.country-header {
+  margin-bottom: 40px;
+}
+
+.country-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f3f4f6;
+  margin-bottom: 10px;
+}
+
+.country-header p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #9ca3af;
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.poster {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #141414;
+  transition: border-color 180ms ease, transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.poster:hover {
+  border-color: #3f3f3f;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.poster-media {
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(160deg, #1f1f1f 0%, #262626 45%, #1a1a1a 100%);
+  border-bottom: 1px solid #2a2a2a;
+  position: relative;
+}
+
+.poster-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.03) 50%,
+    transparent 70%
+  );
+}
+
+.poster-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.poster-line {
+  height: 10px;
+  border-radius: 4px;
+  background: #2a2a2a;
+}
+
+.poster-line--title {
+  width: 72%;
+}
+
+.poster-line--meta {
+  width: 48%;
+  height: 8px;
+  background: #242424;
+}
+
+@media (max-width: 900px) {
+  .poster-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .country-page {
+    padding: 32px 16px 56px;
+  }
+
+  .country-header h1 {
+    font-size: 1.65rem;
+  }
+
+  .poster-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .poster-body {
+    padding: 12px;
+  }
+}
