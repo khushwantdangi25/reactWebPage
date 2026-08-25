@@ -5,20 +5,84 @@
 }
 
 .country-header {
-  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #2a2a2a;
 }
 
-.country-header h1 {
+.country-header-text h1 {
   font-size: 2rem;
   font-weight: 800;
   color: #f3f4f6;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
 }
 
-.country-header p {
+.country-header-text p {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #9ca3af;
+}
+
+.country-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.country-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  padding: 10px 14px;
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+}
+
+.country-search-icon {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #4b5563;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.country-search-icon::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 1.5px;
+  background: #4b5563;
+  bottom: -3px;
+  right: -4px;
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+
+.country-search-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: #2a2a2a;
+}
+
+.country-count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #9ca3af;
+  padding: 8px 12px;
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  white-space: nowrap;
 }
 
 .poster-grid {
@@ -34,14 +98,25 @@
   border-radius: 12px;
   overflow: hidden;
   background: #141414;
+  opacity: 0;
+  animation: poster-in 420ms ease forwards;
+  animation-delay: var(--delay, 0ms);
   transition: border-color 180ms ease, transform 180ms ease,
     box-shadow 180ms ease;
 }
 
 .poster:hover {
   border-color: #3f3f3f;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
+}
+
+.poster:hover .poster-media {
+  background: linear-gradient(160deg, #252525 0%, #2c2c2c 45%, #1f1f1f 100%);
+}
+
+.poster:hover .poster-placeholder {
+  color: #6b7280;
 }
 
 .poster-media {
@@ -49,18 +124,38 @@
   background: linear-gradient(160deg, #1f1f1f 0%, #262626 45%, #1a1a1a 100%);
   border-bottom: 1px solid #2a2a2a;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background 180ms ease;
 }
 
-.poster-media::after {
+.poster-media::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     110deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.03) 50%,
-    transparent 70%
+    transparent 25%,
+    rgba(255, 255, 255, 0.035) 50%,
+    transparent 75%
   );
+  background-size: 200% 100%;
+  animation: shimmer 2.4s ease-in-out infinite;
+}
+
+.poster-placeholder {
+  position: relative;
+  z-index: 1;
+  color: #4b5563;
+  transition: color 180ms ease;
+}
+
+.poster-placeholder svg {
+  width: 36px;
+  height: 36px;
+  display: block;
 }
 
 .poster-body {
@@ -77,18 +172,62 @@
 }
 
 .poster-line--title {
-  width: 72%;
+  height: 11px;
 }
 
 .poster-line--meta {
-  width: 48%;
   height: 8px;
   background: #242424;
+}
+
+.poster-action {
+  margin-top: 6px;
+  width: 88px;
+  height: 28px;
+  border-radius: 6px;
+  background: #1f1f1f;
+  border: 1px solid #2a2a2a;
+}
+
+@keyframes poster-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poster {
+    opacity: 1;
+    animation: none;
+  }
+
+  .poster-media::before {
+    animation: none;
+  }
 }
 
 @media (max-width: 900px) {
   .poster-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .country-search {
+    width: 160px;
   }
 }
 
@@ -97,16 +236,36 @@
     padding: 32px 16px 56px;
   }
 
-  .country-header h1 {
+  .country-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .country-header-text h1 {
     font-size: 1.65rem;
+  }
+
+  .country-toolbar {
+    justify-content: space-between;
+  }
+
+  .country-search {
+    flex: 1;
+    width: auto;
   }
 
   .poster-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 14px;
   }
 
   .poster-body {
     padding: 12px;
+  }
+
+  .poster-placeholder svg {
+    width: 28px;
+    height: 28px;
   }
 }

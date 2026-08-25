@@ -29,7 +29,10 @@
   margin-bottom: 28px;
 }
 
-.quote button {
+.quote .explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 28px;
   font-size: 1rem;
   font-weight: 600;
@@ -37,12 +40,13 @@
   background: #374151;
   border: 1px solid #4b5563;
   border-radius: 8px;
+  text-decoration: none;
   cursor: pointer;
   transition: background-color 180ms ease, border-color 180ms ease,
     transform 180ms ease;
 }
 
-.quote button:hover {
+.quote .explore-btn:hover {
   background: #4b5563;
   border-color: #6b7280;
   transform: translateY(-1px);
