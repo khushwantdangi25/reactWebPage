@@ -1,0 +1,50 @@
+.about-card {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.about-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-heading h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.about-attribute {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-attribute p {
+  font-size: 17px;
+  margin: 10px 0;
+}
+
+.country {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ranking {
+  font-weight: bold;
+}
+
+.population {
+  font-weight: bold;
+}
+
+.fact {
+  color: #555;
+}
+
+.famous {
+  color: #333;
+}

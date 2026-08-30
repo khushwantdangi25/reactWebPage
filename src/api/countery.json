@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "country": "India",
+    "population": 1450000000,
+    "populationRank": 1,
+    "fact": "India is the world's most populous country and has one of the oldest civilizations.",
+    "famousPlace": "Taj Mahal",
+    "famousThing": "Yoga"
+  },
+  {
+    "id": 2,
+    "country": "Japan",
+    "population": 123000000,
+    "populationRank": 12,
+    "fact": "Japan is made up of thousands of islands and is famous for its advanced technology.",
+    "famousPlace": "Mount Fuji",
+    "famousThing": "Anime"
+  },
+  {
+    "id": 3,
+    "country": "France",
+    "population": 68000000,
+    "populationRank": 23,
+    "fact": "France is the most visited country in the world.",
+    "famousPlace": "Eiffel Tower",
+    "famousThing": "French Cuisine"
+  },
+  {
+    "id": 4,
+    "country": "Egypt",
+    "population": 116000000,
+    "populationRank": 14,
+    "fact": "Ancient Egyptians built the pyramids thousands of years ago.",
+    "famousPlace": "Pyramids of Giza",
+    "famousThing": "Ancient Egyptian Civilization"
+  },
+  {
+    "id": 5,
+    "country": "Brazil",
+    "population": 212000000,
+    "populationRank": 7,
+    "fact": "Brazil is the largest country in South America and contains much of the Amazon rainforest.",
+    "famousPlace": "Christ the Redeemer",
+    "famousThing": "Carnival"
+  },
+  {
+    "id": 6,
+    "country": "Australia",
+    "population": 27000000,
+    "populationRank": 55,
+    "fact": "Australia is both a country and a continent and is home to many unique animals.",
+    "famousPlace": "Sydney Opera House",
+    "famousThing": "Kangaroos"
+  },
+  {
+    "id": 7,
+    "country": "Italy",
+    "population": 59000000,
+    "populationRank": 25,
+    "fact": "Italy has more UNESCO World Heritage sites than any other country.",
+    "famousPlace": "Colosseum",
+    "famousThing": "Pizza"
+  },
+  {
+    "id": 8,
+    "country": "Canada",
+    "population": 41000000,
+    "populationRank": 38,
+    "fact": "Canada has the longest coastline of any country in the world.",
+    "famousPlace": "Niagara Falls",
+    "famousThing": "Ice Hockey"
+  },
+  {
+    "id": 9,
+    "country": "Iceland",
+    "population": 400000,
+    "populationRank": 178,
+    "fact": "Iceland has many volcanoes and is one of the best places to see the Northern Lights.",
+    "famousPlace": "Blue Lagoon",
+    "famousThing": "Northern Lights"
+  },
+  {
+    "id": 10,
+    "country": "Switzerland",
+    "population": 9000000,
+    "populationRank": 100,
+    "fact": "Switzerland is famous for its Alps, watches, chocolate, and political neutrality.",
+    "famousPlace": "Swiss Alps",
+    "famousThing": "Swiss Watches"
+  }
+]
