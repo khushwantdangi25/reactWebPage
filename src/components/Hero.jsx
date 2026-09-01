@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import { About } from "./pages/About"
+import { About } from "../pages/About"
 export const Hero = () => {
     return <main>
         <div className="hero">
